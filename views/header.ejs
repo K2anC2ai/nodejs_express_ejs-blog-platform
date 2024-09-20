@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/content.css">
+    <title>MyBlog</title>
+</head>
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/">MyBlog</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/create">Create Post</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+        <div class="menu-icon" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    // JavaScript for Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.querySelector('.navbar');
+
+    menuToggle.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+    });
+</script>

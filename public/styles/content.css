@@ -1,0 +1,302 @@
+    /* General Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Ensure the body and html take the full height */
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+
+    /* Flex container to make sure footer stays at the bottom */
+    body {
+        display: flex;
+        flex-direction: column;
+        background-color: #27e6ff;
+
+    }
+
+    /* Main content area */
+    .content {
+        margin: 50px 150px 50px 150px;
+        flex: 1; /* Allows content to take up remaining space */
+        background-color: #ddf7b5;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Styling for the footer */
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid #444;
+        /* Ensure the footer is always at the bottom */
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* Style for the posts container */
+    .posts {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Style for individual posts */
+    .post {
+        background-color: #fff;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        margin: 0px 50px 0px 50px;
+    }
+
+    .post:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Style for post titles */
+    .post h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    /* Style for post content */
+    .post p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    /* Style for edit and delete links */
+    .post a {
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 20px;
+        color: #007bff;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.2s ease;
+    }
+
+    .post a:hover {
+        border-bottom: 1px solid #007bff;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #222;
+    }
+
+    .logo a {
+        font-size: 24px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+    }
+
+    .nav-links li {
+        margin: 0 15px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        font-size: 16px;
+        color: #fff;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: #f39c12;
+    }
+
+    /* Mobile Menu Icon */
+    .menu-icon {
+        display: none;
+        cursor: pointer;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .nav-links {
+            position: absolute;
+            right: 0;
+            top: 60px;
+            height: 100vh;
+            width: 100%;
+            background-color: #333;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .nav-links li {
+            margin: 20px 0;
+        }
+
+        .nav-links a {
+            font-size: 20px;
+        }
+
+        .menu-icon {
+            display: block;
+        }
+
+        .navbar.active .nav-links {
+            transform: translateX(0);
+        }
+    }
+    form {
+        max-width: 600px; /* Restrict form width */
+        margin: 20px auto; /* Center align form and add vertical margin */
+        padding: 20px;
+        background-color: #f9f9f9; /* Light background for form */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style for form headings */
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #333;
+        text-align: center;
+    }
+
+    /* Style for input fields */
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #333;
+    }
+
+    /* Style for the textarea */
+    textarea {
+        height: 200px; /* Adjust height for textarea */
+        resize: vertical; /* Allow vertical resizing */
+    }
+
+    /* Style for the submit button */
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Responsive behavior */
+    @media (max-width: 768px) {
+        form {
+            padding: 15px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        input[type="text"],
+        textarea {
+            font-size: 14px;
+        }
+
+        button {
+            font-size: 14px;
+            padding: 8px 16px;
+        }
+    }
+
+
+    .create-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .create-form input[type="text"],
+    .create-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .create-form button {
+        padding: 10px;
+        font-size: 18px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .create-form button:hover {
+        background-color: #f39c12;
+    }
+
+    /* Style for the about section */
+    .about {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 20px auto;
+    }
+
+    .about h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .about p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #333;
+    }

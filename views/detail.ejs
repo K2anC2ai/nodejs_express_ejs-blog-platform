@@ -1,0 +1,15 @@
+<%- include('header') %>
+<body>
+<div class="content">
+    <div class="post">
+        <h1><%= post.title %></h1>
+        <p><%= post.content %></p>
+        <a href="/edit/<%= post.id %>">Edit</a>
+        <a href="/delete/<%= post.id %>">Delete</a>
+        <a href="/">Back to Home</a>
+    </div>
+</div>
+</body>
+
+
+<%- include('footer') %>
